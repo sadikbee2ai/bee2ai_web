@@ -16,7 +16,7 @@ export default function InventoryPlanningPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="relative w-full max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative w-full max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
         {/* Text Content */}
         <div className="space-y-6 z-10">
           <div className="inline-block px-3 py-1 rounded-full bg-blue-50 text-[#6388A8] text-sm font-semibold mb-2">
@@ -225,16 +225,16 @@ export default function InventoryPlanningPage() {
        <div className="mt-20 max-w-4xl mx-auto bg-gradient-to-r from-[#05152F] to-[#25456b] rounded-3xl p-12 text-white relative overflow-hidden mb-20">
                 <div className="relative z-10">
                      <h2 className="text-3xl font-bold mb-6 text-center">{t('cta.title')}</h2>
-                     <div className="flex justify-center gap-4">
+                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link
                             href="/contact"
-                            className="bg-blue-500 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg"
+                            className="bg-blue-500 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('cta.talk')}
                         </Link>
                         <Link
                              href="/contact"
-                             className="bg-white text-[#05152F] px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-colors"
+                             className="bg-white text-[#05152F] px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-colors w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('cta.requestDemo')}
                         </Link>

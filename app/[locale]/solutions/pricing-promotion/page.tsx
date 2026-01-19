@@ -16,7 +16,7 @@ export default function PricingPromotionPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
+      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24 overflow-hidden">
         <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#05152F] leading-tight">
               {t('hero.title')}
@@ -125,7 +125,7 @@ export default function PricingPromotionPage() {
       </section>
 
       {/* 6. QUOTE / TEAM */}
-      <section className="w-full bg-white py-24">
+      <section className="w-full bg-white py-24 relative z-10">
           <div className="max-w-7xl mx-auto px-4 border border-slate-100 rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1 space-y-6">
                   <h3 className="text-2xl font-serif italic text-[#05152F]">

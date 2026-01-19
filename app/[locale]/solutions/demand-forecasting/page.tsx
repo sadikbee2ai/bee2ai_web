@@ -14,7 +14,7 @@ export default function DemandForecastingPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="relative w-full max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative w-full max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
         {/* Text Content */}
         <div className="space-y-6 z-10">
           <div className="inline-block px-3 py-1 rounded-full bg-blue-50 text-[#6388A8] text-sm font-semibold mb-2">
@@ -115,7 +115,7 @@ export default function DemandForecastingPage() {
       </section>
 
       {/* 3. DASHBOARD HIGHLIGHT */}
-      <section className="w-full bg-[#FAFCFE] py-24" id="features">
+      <section className="w-full bg-[#FAFCFE] py-24 overflow-hidden" id="features">
          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Visual */}
             <div className="order-2 lg:order-1 relative">
@@ -163,7 +163,7 @@ export default function DemandForecastingPage() {
 
       {/* 4. SMARTER PLANNING TAB SECTION */}
       <section className="w-full bg-white py-24">
-         <div className="max-w-7xl mx-auto px-4">
+         <div className="max-w-7xl mx-auto px-4 relative z-10">
              <div className="text-center mb-16">
                  <h2 className="text-3xl md:text-4xl font-bold text-[#05152F]">{t('smarterPlanning.title')}</h2>
                  <p className="mt-4 text-lg text-[#05152F]/60">{t('smarterPlanning.subtitle')}</p>

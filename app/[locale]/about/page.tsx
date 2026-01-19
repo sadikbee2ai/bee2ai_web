@@ -268,16 +268,16 @@ export default function AboutPage() {
                  <p className="text-blue-100/80 text-lg mb-12 max-w-2xl mx-auto">
                      {t('FooterCTA.description')}
                  </p>
-                 <div className="flex justify-center gap-4">
+                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link
                             href="/contact"
-                            className="bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg"
+                            className="bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('FooterCTA.contactUs')}
                         </Link>
                         <Link
                              href="/contact"
-                             className="bg-white text-[#05152F] px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors"
+                             className="bg-white text-[#05152F] px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('FooterCTA.requestDemo')}
                         </Link>

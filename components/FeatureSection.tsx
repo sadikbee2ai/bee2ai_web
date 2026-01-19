@@ -52,7 +52,7 @@ export default function FeatureSection() {
               section.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
             }`}
           >
-            <div className='flex-1 space-y-6'>
+            <div className='flex-1 space-y-6 relative z-10'>
               <h2 className='text-3xl md:text-4xl font-bold text-[#05152F] font-sans'>
                 {t(`${section.id}.title`)}
               </h2>

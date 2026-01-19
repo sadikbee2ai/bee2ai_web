@@ -53,7 +53,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} antialiased relative overflow-x-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           <PageDecorations />

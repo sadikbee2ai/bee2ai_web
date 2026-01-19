@@ -30,7 +30,7 @@ export default function Header() {
   }, [hoveredIndex])
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <header className="fixed top-0 left-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="container mx-auto px-4 lg:px-8 xl:px-12">
         <div className="flex h-20 items-center justify-between">
             {/* Logo */}
@@ -46,7 +46,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:block relative flex-1">
+            <div className="hidden 2xl:block relative flex-1">
                 <nav className="relative">
                     {/* Hover Highlight */}
                     <div
@@ -69,12 +69,12 @@ export default function Header() {
                                 {item.href ? (
                                     <Link 
                                         href={item.href as AppPath}
-                                        className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors"
+                                        className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors whitespace-nowrap"
                                     >
                                         {t(item.label)}
                                     </Link>
                                 ) : (
-                                    <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors">
+                                    <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors whitespace-nowrap">
                                         {t(item.label)}
                                         {(item.dropdown || item.sections) && (
                                             <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180" />
@@ -144,7 +144,7 @@ export default function Header() {
                 </Link>
                 {/* Mobile Menu Button */}
                 <button
-                    className='xl:hidden p-2 text-slate-500 hover:text-slate-900'
+                    className='2xl:hidden p-2 text-slate-500 hover:text-slate-900'
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X /> : <Menu />}
@@ -155,7 +155,7 @@ export default function Header() {
 
        {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 p-4 shadow-lg xl:hidden flex flex-col gap-4 max-h-[calc(100vh-80px)] overflow-y-auto">
+        <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 p-4 shadow-lg 2xl:hidden flex flex-col gap-4 max-h-[calc(100vh-80px)] overflow-y-auto">
              {navItems.map((item) => (
                  <div key={item.label} className="py-2 border-b border-gray-50 last:border-0">
                       {item.href ? (

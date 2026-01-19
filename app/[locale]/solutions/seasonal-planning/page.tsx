@@ -16,7 +16,7 @@ export default function SeasonalPlanningPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
+      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24 overflow-hidden">
         <div className="space-y-8">
             <div className="text-xs font-bold tracking-widest text-slate-500 uppercase">
                 {t('hero.badge')}
