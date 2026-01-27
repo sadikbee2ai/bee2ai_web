@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import animationData from '@/components/lotties/data-animation.json';
-import connectionAnimation from '@/public/lottie/E-commerce connection.json';
+
 
 export default function AboutPage() {
   const t = useTranslations('About');
@@ -95,9 +95,9 @@ export default function AboutPage() {
                     <div className="relative w-32 h-32 flex items-center justify-center mb-4">
                         <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="#EAF4F9" strokeWidth="8" fill="transparent" />
-                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="0" />
+                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="10" />
                         </svg>
-                        <span className="absolute text-2xl font-bold text-[#05152F]">100%</span>
+                        <span className="absolute text-2xl font-bold text-[#05152F]">99%</span>
                     </div>
                     <p className="text-[#05152F] font-bold text-sm">{t('Sustainability.forecastAccuracy')}</p>
                 </div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                     <div className="relative w-32 h-32 flex items-center justify-center mb-4">
                          <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="#EAF4F9" strokeWidth="8" fill="transparent" />
-                            <circle cx="64" cy="64" r="56" stroke="#FDB955" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="100" />
+                            <circle cx="64" cy="64" r="56" stroke="#FDB955" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="246" />
                         </svg>
                         <span className="absolute text-2xl font-bold text-[#05152F]">30%</span>
                     </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                     <div className="relative w-32 h-32 flex items-center justify-center mb-4">
                         <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="#EAF4F9" strokeWidth="8" fill="transparent" />
-                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="75" />
+                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="211" />
                         </svg>
                         <span className="absolute text-2xl font-bold text-[#05152F]">40%</span>
                     </div>
