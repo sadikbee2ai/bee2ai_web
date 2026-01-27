@@ -1,8 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, AppPath } from '@/i18n/routing';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import shoppingAnimation from '@/public/lottie/Ecommerce shopping lottie animation.json';
 
 const featuresPayload = [
   {
@@ -48,7 +52,7 @@ export default function FeatureSection() {
               section.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
             }`}
           >
-            <div className='flex-1 space-y-6'>
+            <div className='flex-1 space-y-6 relative z-10'>
               <h2 className='text-3xl md:text-4xl font-bold text-[#05152F] font-sans'>
                 {t(`${section.id}.title`)}
               </h2>
@@ -57,7 +61,7 @@ export default function FeatureSection() {
               </p>
               <div>
                 <Link
-                  href={section.ctaLink}
+                  href={section.ctaLink as AppPath}
                   className='inline-flex items-center justify-center rounded-full bg-[#FDB955] px-8 py-3 text-sm font-bold text-[#05152F] transition-all hover:bg-[#e0a844] hover:shadow-md'
                 >
                   {t(`${section.id}.ctaText`)}
@@ -67,7 +71,11 @@ export default function FeatureSection() {
             <div className='flex-1 w-full'>
               <div className='aspect-video relative rounded-2xl overflow-hidden bg-[#EAF4F9] shadow-lg flex items-center justify-center group hover:shadow-xl transition-all'>
                  {/* Placeholder for service visuals - using icons or simple text for now */}
-                 {section.illustration ? (
+                 {section.id === 'pricingPromotion' ? (
+                    <div className="w-full h-full p-4">
+                        <Lottie animationData={shoppingAnimation} loop={true} className="w-full h-full" />
+                    </div>
+                 ) : section.illustration ? (
                     <Image 
                       src={section.illustration} 
                       alt={t(`${section.id}.title`)}

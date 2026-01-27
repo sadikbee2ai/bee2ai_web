@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, AppPath } from '@/i18n/routing';
 import Image from 'next/image';
 import { ArrowRight, BarChart3, LineChart, PieChart, ShoppingCart, Truck } from 'lucide-react';
 
@@ -18,22 +18,22 @@ const featuresPayload = [
     {
       id: 'demandForecasting',
       ctaLink: '/solutions/demand-forecasting',
-      iconUrl: '/icons/icon-ai.svg' 
+      iconUrl: '/icons/market-purchase-svgrepo-com.svg'
     },
     {
       id: 'pricingPromotion',
       ctaLink: '/solutions/pricing-promotion',
-      iconUrl: '/icons/icon-chart.svg' 
+      iconUrl: '/icons/shopping-pos-machine-svgrepo-com.svg'
     },
     {
       id: 'inventoryPlanning',
       ctaLink: '/solutions/end-to-end-inventory-planning',
-      iconUrl: '/icons/icon-data.svg' 
+      iconUrl: '/icons/square-dollar-chart-svgrepo-com.svg'
     },
     {
       id: 'seasonalPlanning',
       ctaLink: '/solutions/seasonal-planning',
-      iconUrl: '/icons/icon-market.svg' 
+      iconUrl: '/icons/building-retail-svgrepo-com.svg'
     }
   ];
 
@@ -59,7 +59,7 @@ export default function ValueChain() {
              return (
               <Link 
                 key={feature.id} 
-                href={feature.ctaLink}
+                href={feature.ctaLink as AppPath}
                 className="group relative bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col items-center text-center"
               >
                 <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">

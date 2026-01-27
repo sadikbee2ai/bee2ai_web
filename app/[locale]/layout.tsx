@@ -5,6 +5,7 @@ import { siteMeta } from '@/data/siteContent';
 
 import PageDecorations from '@/components/PageDecorations';
 import Header from '@/components/kokonutui/Header';
+import AiChatWidget from '@/components/AiChatWidget';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -52,12 +53,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} antialiased relative overflow-x-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           <PageDecorations />
           <Header />
             {children}
+          <AiChatWidget />
         </NextIntlClientProvider>
       </body>
     </html>

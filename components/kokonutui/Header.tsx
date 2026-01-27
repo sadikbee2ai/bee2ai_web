@@ -1,10 +1,11 @@
+
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { Link } from '@/i18n/routing'; // Use i18n Link
+import { Link, usePathname, AppPath } from '@/i18n/routing'; // Use i18n Link
 import Image from 'next/image';
 import { navItems } from '@/data/siteContent';
-import { ChevronDown, Search, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import LanguagePicker from '@/components/LanguagePicker';
 import { useTranslations } from 'next-intl';
 
@@ -29,7 +30,7 @@ export default function Header() {
   }, [hoveredIndex])
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <header className="fixed top-0 left-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="container mx-auto px-4 lg:px-8 xl:px-12">
         <div className="flex h-20 items-center justify-between">
             {/* Logo */}
@@ -45,7 +46,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:block relative flex-1">
+            <div className="hidden 2xl:block relative flex-1">
                 <nav className="relative">
                     {/* Hover Highlight */}
                     <div
@@ -67,13 +68,13 @@ export default function Header() {
                             >
                                 {item.href ? (
                                     <Link 
-                                        href={item.href}
-                                        className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors"
+                                        href={item.href as AppPath}
+                                        className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors whitespace-nowrap"
                                     >
                                         {t(item.label)}
                                     </Link>
                                 ) : (
-                                    <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors">
+                                    <div className="flex items-center gap-1.5 text-[15px] font-medium text-slate-600 group-hover:text-slate-900 transition-colors whitespace-nowrap">
                                         {t(item.label)}
                                         {(item.dropdown || item.sections) && (
                                             <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180" />
@@ -88,7 +89,7 @@ export default function Header() {
                                         {item.dropdown.map((subItem) => (
                                             <li key={subItem.label}>
                                                 <Link
-                                                    href={subItem.href}
+                                                    href={subItem.href as AppPath}
                                                     className='block px-3 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-gray-50 rounded-lg transition-colors'
                                                 >
                                                     {subItem.label}
@@ -111,7 +112,7 @@ export default function Header() {
                                                     {section.items.map((subItem) => (
                                                     <li key={subItem.label}>
                                                         <Link
-                                                            href={subItem.href}
+                                                            href={subItem.href as AppPath}
                                                             className='text-sm text-slate-500 hover:text-blue-600 transition-colors block'
                                                         >
                                                             {subItem.label}
@@ -134,14 +135,8 @@ export default function Header() {
             <div className='flex items-center gap-2'>
                 <LanguagePicker className="hidden lg:flex scale-90 origin-right" />
                 
-                <button
-                    className='p-2 text-slate-500 hover:text-slate-900 transition-colors'
-                    aria-label='Search'
-                >
-                    <Search className="w-5 h-5" />
-                </button>
-
-                 <Link
+                
+                <Link
                     href='/contact'
                     className='hidden md:inline-flex h-9 items-center justify-center rounded-full bg-[#05152F] px-5 text-sm font-medium text-white shadow-sm hover:bg-[#05152F]/90 transition-all ml-2'
                 >
@@ -149,7 +144,7 @@ export default function Header() {
                 </Link>
                 {/* Mobile Menu Button */}
                 <button
-                    className='xl:hidden p-2 text-slate-500 hover:text-slate-900'
+                    className='2xl:hidden p-2 text-slate-500 hover:text-slate-900'
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X /> : <Menu />}
@@ -160,21 +155,21 @@ export default function Header() {
 
        {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 p-4 shadow-lg xl:hidden flex flex-col gap-4">
+        <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 p-4 shadow-lg 2xl:hidden flex flex-col gap-4 max-h-[calc(100vh-80px)] overflow-y-auto">
              {navItems.map((item) => (
                  <div key={item.label} className="py-2 border-b border-gray-50 last:border-0">
                       {item.href ? (
-                          <Link href={item.href} className="font-medium text-slate-900 block mb-2" onClick={() => setIsMobileMenuOpen(false)}>
-                              {item.label}
+                          <Link href={item.href as AppPath} className="font-medium text-slate-900 block mb-2" onClick={() => setIsMobileMenuOpen(false)}>
+                              {t(item.label)}
                           </Link>
                       ) : (
-                          <span className="font-medium text-slate-900 block mb-2">{item.label}</span>
+                          <span className="font-medium text-slate-900 block mb-2">{t(item.label)}</span>
                       )}
 
                      {(item.dropdown || (item.sections?.flatMap(s => s.items))) && (
                          <div className="pl-4 space-y-2">
                              {(item.dropdown || item.sections?.flatMap(s => s.items))?.map(sub => (
-                                 <Link key={sub.label} href={sub.href} className="block text-sm text-slate-500" onClick={() => setIsMobileMenuOpen(false)}>
+                                 <Link key={sub.label} href={sub.href as AppPath} className="block text-sm text-slate-500" onClick={() => setIsMobileMenuOpen(false)}>
                                      {sub.label}
                                  </Link>
                              ))}
@@ -182,6 +177,21 @@ export default function Header() {
                      )}
                  </div>
              ))}
+             
+             <div className="pt-4 border-t border-gray-100 flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-slate-600">Dil / Language:</span>
+                    <LanguagePicker />
+                </div>
+                
+                <Link
+                    href='/contact'
+                    className='flex h-10 items-center justify-center rounded-full bg-[#05152F] px-5 text-sm font-medium text-white shadow-sm hover:bg-[#05152F]/90 transition-all'
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    {t('getStarted')}
+                </Link>
+             </div>
         </div>
       )}
     </header>

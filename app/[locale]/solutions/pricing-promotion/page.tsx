@@ -4,6 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import connectionAnimation from '@/public/lottie/E-commerce connection.json';
 
 export default function PricingPromotionPage() {
   const t = useTranslations('PricingPromotion');
@@ -12,7 +16,7 @@ export default function PricingPromotionPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
+      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24 overflow-hidden">
         <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#05152F] leading-tight">
               {t('hero.title')}
@@ -27,26 +31,21 @@ export default function PricingPromotionPage() {
                >
                    {t('hero.getStarted')}
                </Link>
-               <Link
-                    href="/contact"
-                    className="px-8 py-4 rounded-full bg-white text-[#0077B6] border-2 border-[#0077B6] font-bold hover:bg-blue-50 transition-colors"
-               >
-                   {t('hero.viewVideo')}
-               </Link>
+
             </div>
         </div>
         <div className="relative flex justify-center items-center">
             {/* Organic shape background */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50 rounded-full opacity-70 blur-3xl -z-10" />
-            <div className="relative z-10 w-full max-w-md aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                 <Image
-                    src="/vectors/4.svg"
-                    alt="Pricing Strategy"
-                    width={500}
-                    height={500}
-                    className="w-full h-full object-cover"
-                 />
-            </div>
+                <div className="relative z-10 w-full max-w-md aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl bg-blue-50/50">
+                     <div className="absolute inset-0 flex items-center justify-center p-8">
+                         <Lottie 
+                             animationData={connectionAnimation} 
+                             loop={true} 
+                             className="w-full h-full"
+                         />
+                     </div>
+                </div>
         </div>
       </section>
 
@@ -126,7 +125,7 @@ export default function PricingPromotionPage() {
       </section>
 
       {/* 6. QUOTE / TEAM */}
-      <section className="w-full bg-white py-24">
+      <section className="w-full bg-white py-24 relative z-10">
           <div className="max-w-7xl mx-auto px-4 border border-slate-100 rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1 space-y-6">
                   <h3 className="text-2xl font-serif italic text-[#05152F]">

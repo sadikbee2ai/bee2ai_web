@@ -4,6 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import merchAnimation from '@/public/lottie/Merch Stores - Imprint Genius.json';
 
 export default function InventoryPlanningPage() {
   const t = useTranslations('InventoryPlanning');
@@ -12,7 +16,7 @@ export default function InventoryPlanningPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="relative w-full max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative w-full max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
         {/* Text Content */}
         <div className="space-y-6 z-10">
           <div className="inline-block px-3 py-1 rounded-full bg-blue-50 text-[#6388A8] text-sm font-semibold mb-2">
@@ -41,22 +45,12 @@ export default function InventoryPlanningPage() {
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#EAF4F9] rounded-full opacity-60 blur-3xl -z-10" />
              <div className="relative bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 {/* Placeholder for worker image */}
-                <div className="w-full h-[400px] bg-slate-100 flex items-center justify-center relative">
-                   <Image 
-                        src="/vectors/8.svg" 
-                        alt="Inventory System" 
-                        width={600} 
-                        height={400} 
-                        className="w-full h-full object-cover opacity-80" 
+                <div className="w-full h-[400px] bg-white flex items-center justify-center relative p-8">
+                   <Lottie 
+                        animationData={merchAnimation} 
+                        loop={true} 
+                        className="w-full h-full"
                    />
-                   <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-200">
-                          <div className="flex items-center gap-3">
-                              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-                              <span className="font-bold text-[#05152F]">{t('hero.systemOptimized')}</span>
-                          </div>
-                      </div>
-                   </div>
                 </div>
              </div>
         </div>
@@ -231,16 +225,16 @@ export default function InventoryPlanningPage() {
        <div className="mt-20 max-w-4xl mx-auto bg-gradient-to-r from-[#05152F] to-[#25456b] rounded-3xl p-12 text-white relative overflow-hidden mb-20">
                 <div className="relative z-10">
                      <h2 className="text-3xl font-bold mb-6 text-center">{t('cta.title')}</h2>
-                     <div className="flex justify-center gap-4">
+                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link
                             href="/contact"
-                            className="bg-blue-500 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg"
+                            className="bg-blue-500 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('cta.talk')}
                         </Link>
                         <Link
                              href="/contact"
-                             className="bg-white text-[#05152F] px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-colors"
+                             className="bg-white text-[#05152F] px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-colors w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('cta.requestDemo')}
                         </Link>

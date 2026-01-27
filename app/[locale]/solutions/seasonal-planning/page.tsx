@@ -4,6 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import packagingAnimation from '@/public/lottie/Packaging for Delivery.json';
 
 export default function SeasonalPlanningPage() {
   const t = useTranslations('Solutions.seasonal-planning');
@@ -12,7 +16,7 @@ export default function SeasonalPlanningPage() {
     <main className="flex min-h-screen flex-col items-center justify-start bg-white pt-24">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
+      <section className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24 overflow-hidden">
         <div className="space-y-8">
             <div className="text-xs font-bold tracking-widest text-slate-500 uppercase">
                 {t('hero.badge')}
@@ -40,28 +44,15 @@ export default function SeasonalPlanningPage() {
         </div>
         <div className="relative flex justify-center items-center">
              {/* Visual */}
-             <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl bg-blue-50">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                        <Image
-                            src="/vectors/12.svg"
-                            alt="Seasonal Planning"
-                            width={500}
-                            height={500}
-                            className="w-full h-full object-cover"
+             <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl bg-blue-50/50">
+                  <div className="absolute inset-0 flex items-center justify-center p-8">
+                        <Lottie 
+                            animationData={packagingAnimation} 
+                            loop={true} 
+                            className="w-full h-full"
                         />
                    </div>
-                   {/* Floating Chart Card */}
-                   <div className="absolute top-10 right-0 w-48 bg-white p-3 rounded-xl shadow-lg border border-slate-100 animate-float-slow">
-                        <div className="h-2 w-full bg-slate-100 rounded mb-2" />
-                        <div className="h-2 w-2/3 bg-slate-100 rounded mb-4" />
-                        <div className="flex items-end justify-between h-16 gap-1">
-                             <div className="w-full bg-blue-100 rounded-t h-[40%]" />
-                             <div className="w-full bg-blue-200 rounded-t h-[60%]" />
-                             <div className="w-full bg-blue-300 rounded-t h-[30%]" />
-                             <div className="w-full bg-blue-400 rounded-t h-[80%]" />
-                             <div className="w-full bg-blue-500 rounded-t h-[50%]" />
-                        </div>
-                   </div>
+                   {/* Floating Chart Card logic removed as Lottie is complex enough */}
             </div>
         </div>
       </section>

@@ -9,9 +9,9 @@
     "getStarted": "Get Started"
   },
   "Hero": {
-    "title": "Empowering Businesses with",
+    "title": "Empowering Businesses with ",
     "titleSub": "Intelligent AI Solutions",
-    "description": "Bee2 AI specializes in AI-based forecasting and smart inventory management for retail and e-commerce. We help you increase revenue and reduce waste by solving stock-out and overstock problems with 99% forecast accuracy and real-time, data-driven insights.",
+    "description": "Don't let rigid, off-the-shelf software hold you back. Bee2 AI delivers tailor-made solutions specific to your scenarios, customers, and processes. We replace inflexible ERP modules with intelligent forecasting that adapts to you.",
     "ctaText": "Get Started",
     "secondaryCtaText": "Learn More",
     "badges": {
@@ -47,14 +47,14 @@
     "trustedBy": "Trusted by industry leading retailers and manufacturers",
     "ValueChain": {
       "title": "Explore how Bee2 AI supports the entire retail value chain",
-      "description": "From demand forecasting to shelf availability, our integrated modules work together to optimize every step."
+      "description": "Break free from the constraints of boxed software. Our modules are developed to fit your unique processes, combining industry best practices with tailor-made precision."
     }
   },
   "About": {
     "Hero": {
       "title": "Plan better. Sell more.",
       "titleAccent": "Waste less.",
-      "description": "AI-driven forecasting and inventory planning for the modern retail era. We help retailers and manufacturers optimize their supply chain to maximize profitability and sustainability.",
+      "description": "The future of retail isn't in boxed software, but in scenarios crafted for you. We blend industry best practices with a flexible, solution-oriented approach. Forget high license fees for incompatible tools; focus on fit and agility.",
       "contactUs": "Contact us",
       "requestDemo": "Request demo",
       "stats": {
@@ -90,7 +90,7 @@
     "Origins": {
       "title": "Origins of the Bee2 name",
       "p1": "Bees are nature's most efficient organizers. They communicate, collaborate, and optimize their resources with incredible precision.",
-      "p2": "We named our company <strong>Bee2</strong> because we bring that same <strong>swarm intelligence</strong> to retail.",
+      "p2": "We named our company <strong>Bee2</strong> because we bring that same <strong>swarm intelligence</strong> and adaptability to retail. Just as a tailor crafts fabric to fit the person, we craft technology to fit you.",
       "p3": "Connecting every part of your supply chain to work together in perfect harmony."
     },
     "SustainabilityCircle": {
@@ -146,13 +146,13 @@
       "benefits": {
         "0": { "title": "Reduce Stock-outs", "desc": "Ensure products are available when customers want them, boosting revenue." },
         "1": { "title": "Minimize Waste", "desc": "Avoid over-ordering perishables or fast-fashion items." },
-        "2": { "title": "Automated Insights", "desc": "Let AI handle the complex calculations so your team can focus on strategy." }
+        "2": { "title": "Flexible Scenarios", "desc": "Don't get stuck with rigid software limits. Forecast using rules and scenarios specific to your business." }
       }
     },
     "inventory-planning": {
       "title": "End-to-End Inventory Planning",
       "subtitle": "Balance Stock for Maximum Profitability",
-      "description": "Maintain the perfect inventory levels across your entire supply chain. Our solution calculates safety stocks, reorder points, and transfer recommendations to free up working capital.",
+      "description": "Every business has a unique inventory flow. Instead of standard ERP modules, use a flexible planning engine that understands your specific warehouse constraints and business rules.",
       "features": {
         "0": "Automated Replenishment",
         "1": "Safety Stock Optimization",
@@ -163,13 +163,13 @@
       "benefits": {
         "0": { "title": "Working Capital Efficiency", "desc": "Reduce capital tied up in excess inventory." },
         "1": { "title": "Higher Service Levels", "desc": "Maintain high availability without bloating your warehouse." },
-        "2": { "title": "Dynamic Responsiveness", "desc": "Automatically adjust to changing lead times and demand spikes." }
+        "2": { "title": "Dynamic Adaptation", "desc": "Unlike your ERP, our flexible structure adapts instantly to changing lead times and demand fluctuations." }
       }
     },
     "pricing-promotion": {
       "title": "Pricing & Promotion Forecasting",
       "subtitle": "Optimize Margins with Smart Pricing",
-      "description": "Stop guessing what discounts work. Simulate price changes and promotion scenarios to predict their impact on volume, revenue, and gross margin before execution.",
+      "description": "Don't follow competitors blindly. Simulate pricing scenarios tailored to your own cost structure, stock position, and customer behavior.",
       "features": {
         "0": "Price Elasticity Modeling",
         "1": "Promotion Uplift Prediction",
@@ -197,7 +197,7 @@
       "benefits": {
         "0": { "title": "Higher Turnover", "desc": "Move seasonal stock fast before it loses value." },
         "1": { "title": "Optimized Margins", "desc": "Find the perfect price point to clear stock without giving away margin." },
-        "2": { "title": "Automated Execution", "desc": "Save time with AI-driven price recommendations." }
+        "2": { "title": "Custom Logic", "desc": "Teach the system your end-of-season rules once, and let AI manage the rest according to your strategy." }
       },
       "hero": {
         "badge": "Seasonal planning solution",
@@ -374,5 +374,15 @@
       "talk": "Let's Talk",
       "requestDemo": "Request Demo"
     }
+  },
+  "ChatWidget": {
+    "buttonText": "Ask BeeAI",
+    "title": "BeeAI Assistant",
+    "status": "Online",
+    "welcomeMessage": "Hello! I'm BeeAI. How can I help you?",
+    "inputPlaceholder": "Ask BeeAI something...",
+    "errorGeneral": "An error occurred, please try again.",
+    "errorConnection": "Sorry, there is a connection issue right now. Please try again later.",
+    "demoResponse": "This is a demo response. Actual responses will be available once the backend connection is fully established."
   }
 }

@@ -104,7 +104,7 @@ export default function LanguagePicker({ className, showLabel = false }: Languag
   }
 
   return (
-    <div className={cn("flex items-center", className)}>
+    <div className={cn("flex items-center", className)} dir="ltr">
       <div
         className={cn(
           "inline-flex gap-1 p-1.5 rounded-2xl border border-gray-200",

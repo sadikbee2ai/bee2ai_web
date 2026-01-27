@@ -4,6 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import animationData from '@/components/lotties/data-animation.json';
+
 
 export default function AboutPage() {
   const t = useTranslations('About');
@@ -90,9 +95,9 @@ export default function AboutPage() {
                     <div className="relative w-32 h-32 flex items-center justify-center mb-4">
                         <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="#EAF4F9" strokeWidth="8" fill="transparent" />
-                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="0" />
+                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="10" />
                         </svg>
-                        <span className="absolute text-2xl font-bold text-[#05152F]">100%</span>
+                        <span className="absolute text-2xl font-bold text-[#05152F]">99%</span>
                     </div>
                     <p className="text-[#05152F] font-bold text-sm">{t('Sustainability.forecastAccuracy')}</p>
                 </div>
@@ -102,7 +107,7 @@ export default function AboutPage() {
                     <div className="relative w-32 h-32 flex items-center justify-center mb-4">
                          <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="#EAF4F9" strokeWidth="8" fill="transparent" />
-                            <circle cx="64" cy="64" r="56" stroke="#FDB955" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="100" />
+                            <circle cx="64" cy="64" r="56" stroke="#FDB955" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="246" />
                         </svg>
                         <span className="absolute text-2xl font-bold text-[#05152F]">30%</span>
                     </div>
@@ -114,7 +119,7 @@ export default function AboutPage() {
                     <div className="relative w-32 h-32 flex items-center justify-center mb-4">
                         <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="#EAF4F9" strokeWidth="8" fill="transparent" />
-                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="75" />
+                            <circle cx="64" cy="64" r="56" stroke="#0077B6" strokeWidth="8" fill="transparent" strokeDasharray="351" strokeDashoffset="211" />
                         </svg>
                         <span className="absolute text-2xl font-bold text-[#05152F]">40%</span>
                     </div>
@@ -144,23 +149,8 @@ export default function AboutPage() {
               </div>
               <div className="relative">
                    {/* Laptop Placeholder */}
-                   <div className="w-full aspect-[16/10] bg-white rounded-xl shadow-2xl border-4 border-slate-200 flex items-center justify-center p-8 relative overflow-hidden">
-                        <div className="absolute inset-x-0 bottom-0 h-8 bg-slate-100 border-t border-slate-200" /> {/* Keyboard area */}
-                        <div className="w-full h-full bg-[#05152F] rounded text-white p-6 overflow-hidden">
-                             {/* Mock UI */}
-                             <div className="flex justify-between items-center mb-8">
-                                 <div className="w-20 h-4 bg-white/20 rounded" />
-                                 <div className="flex gap-2">
-                                     <div className="w-8 h-8 rounded-full bg-white/20" />
-                                     <div className="w-8 h-8 rounded-full bg-blue-500" />
-                                 </div>
-                             </div>
-                             <div className="grid grid-cols-3 gap-4">
-                                 <div className="h-24 bg-white/10 rounded" />
-                                 <div className="h-24 bg-white/10 rounded" />
-                                 <div className="h-24 bg-white/10 rounded" />
-                             </div>
-                        </div>
+                   <div className="w-full aspect-[16/10] bg-white rounded-xl shadow-2xl border-4 border-slate-200 flex items-center justify-center p-2 relative overflow-hidden">
+                        <Lottie animationData={animationData} loop={true} className="w-full h-full" />
                    </div>
               </div>
           </div>
@@ -200,9 +190,9 @@ export default function AboutPage() {
                          <p className="text-slate-500 text-sm font-medium mb-4">{member.role}</p>
                                                   {/* LinkedIn Icon */}
                           {member.linkedin ? (
-                              <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-100 hover:text-blue-600 transition-colors cursor-pointer">
+                              <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-blue-100 hover:text-blue-600 transition-colors cursor-pointer">
                                   <span className="font-bold text-xs">in</span>
-                              </Link>
+                              </a>
                           ) : (
                                <div className="w-8 h-8 rounded bg-slate-100 flex items-center justify-center text-slate-300 cursor-not-allowed" title="No LinkedIn profile available">
                                   <span className="font-bold text-xs">in</span>
@@ -278,16 +268,16 @@ export default function AboutPage() {
                  <p className="text-blue-100/80 text-lg mb-12 max-w-2xl mx-auto">
                      {t('FooterCTA.description')}
                  </p>
-                 <div className="flex justify-center gap-4">
+                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link
                             href="/contact"
-                            className="bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg"
+                            className="bg-blue-500 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-400 transition-colors shadow-lg w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('FooterCTA.contactUs')}
                         </Link>
                         <Link
                              href="/contact"
-                             className="bg-white text-[#05152F] px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors"
+                             className="bg-white text-[#05152F] px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors w-full sm:w-auto flex items-center justify-center text-center"
                         >
                             {t('FooterCTA.requestDemo')}
                         </Link>

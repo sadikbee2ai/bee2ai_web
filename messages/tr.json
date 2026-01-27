@@ -9,9 +9,9 @@
     "getStarted": "Başlayın"
   },
   "Hero": {
-    "title": "İşletmeleri Güçlendiren",
+    "title": "İşletmeleri Güçlendiren ",
     "titleSub": "Akıllı Yapay Zeka Çözümleri",
-    "description": "Bee2 AI, perakende ve e-ticaret için yapay zeka tabanlı tahminleme ve akıllı envanter yönetimi konusunda uzmanlaşmıştır. %99 tahmin doğruluğu ve gerçek zamanlı, veri odaklı içgörülerle stok yetersizliği ve fazlalığı problemlerini çözerek gelirinizi artırmanıza ve israfı azaltmanıza yardımcı oluyoruz.",
+    "description": "Standart, uyumsuz yazılımların sizi yavaşlatmasına izin vermeyin. Bee2 AI, sizin senaryolarınıza, müşterinize ve süreçlerinize özel, terzi usulü esnek çözümler sunar. ERP'lerin katı kalıpları ve yüksek uyarlama maliyetleri yerine, işinize tam uyum sağlayan akıllı tahminleme altyapısı.",
     "ctaText": "Başlayın",
     "secondaryCtaText": "Daha Fazla Bilgi",
     "badges": {
@@ -47,14 +47,14 @@
     "trustedBy": "Sektör lideri perakendeciler ve üreticiler tarafından güvenilmektedir",
     "ValueChain": {
       "title": "Bee2 AI'nın tüm perakende değer zincirini nasıl desteklediğini keşfedin",
-      "description": "Talep tahmininden raf bulunurluğuna kadar, entegre modüllerimiz her adımı optimize etmek için birlikte çalışır."
+      "description": "Hazır yazılım dünyasının kısıtlamalarından kurtulun. Süreçlerinize özel geliştirdiğimiz modüllerle, terzi usulü hassasiyetini ve endüstri standartlarını (best practices) birleştiriyoruz."
     }
   },
   "About": {
     "Hero": {
       "title": "Daha iyi planlayın. Daha çok satın.",
       "titleAccent": "Daha az israf edin.",
-      "description": "Modern perakende çağı için yapay zeka destekli tahminleme ve envanter planlama. Perakendecilerin ve üreticilerin karlılığı ve sürdürülebilirliği maksimize etmeleri için tedarik zincirlerini optimize etmelerine yardımcı oluyoruz.",
+      "description": "Perakendenin geleceği paket yazılımlarda değil, size özel kurgulanmış senaryolarda. Hazır 'best practice' dayatmalarını, esnek ve çözüm odaklı yaklaşımımızla birleştiriyoruz. Lisans maliyetlerine değil, geliştirme ve tam uyuma odaklanıyoruz.",
       "contactUs": "İletişime Geçin",
       "requestDemo": "Demo İsteyin",
       "stats": {
@@ -90,7 +90,7 @@
     "Origins": {
       "title": "Bee2 isminin kökeni",
       "p1": "Arılar doğanın en verimli organizatörleridir. İnanılmaz bir hassasiyetle iletişim kurar, işbirliği yapar ve kaynaklarını optimize ederler.",
-      "p2": "Şirketimize <strong>Bee2</strong> adını verdik çünkü aynı <strong>kovan zekasını</strong> perakendeye getiriyoruz.",
+      "p2": "Şirketimize <strong>Bee2</strong> adını verdik çünkü aynı <strong>kovan zekasını</strong> ve uyumu perakendeye getiriyoruz. Tıpkı bir terzinin kumaşı kişiye özel işlemesi gibi, biz de teknolojiyi sizin için işliyoruz.",
       "p3": "Tedarik zincirinizin her parçasını mükemmel bir uyum içinde çalışacak şekilde birbirine bağlıyoruz."
     },
     "SustainabilityCircle": {
@@ -146,13 +146,13 @@
       "benefits": {
         "0": { "title": "Stok Tükenmelerini Azaltın", "desc": "Ürünlerin müşteriler istediğinde mevcut olmasını sağlayarak geliri artırın." },
         "1": { "title": "İsrafı En Aza İndirin", "desc": "Bozulabilir veya hızlı tüketilen ürünlerin gereğinden fazla sipariş edilmesini önleyin." },
-        "2": { "title": "Otomatik Öngörüler", "desc": "Ekibinizin stratejiye odaklanabilmesi için karmaşık hesaplamaları yapay zekaya bırakın." }
+        "2": { "title": "Esnek Senaryolar", "desc": "Paket yazılımların sınırlarına takılmayın. Size özel kurallar ve senaryolarla tahminleme yapın." }
       }
     },
     "inventory-planning": {
       "title": "Uçtan Uca Envanter Planlama",
       "subtitle": "Maksimum Karlılık İçin Stoku Dengeleyin",
-      "description": "Tüm tedarik zincirinizde mükemmel envanter seviyelerini koruyun. Çözümümüz, işletme sermayesini serbest bırakmak için güvenlik stoklarını, yeniden sipariş noktalarını ve transfer önerilerini hesaplar.",
+      "description": "Her işletmenin envanter akışı kendine hastır. Standart ERP modülleri yerine, depo kısıtlarınızı ve iş kurallarınızı tam olarak anlayan esnek bir planlama motoru kullanın.",
       "features": {
         "0": "Otomatik İkmal",
         "1": "Güvenlik Stoku Optimizasyonu",
@@ -163,13 +163,13 @@
       "benefits": {
         "0": { "title": "İşletme Sermayesi Verimliliği", "desc": "Fazla envantere bağlı sermayeyi azaltın." },
         "1": { "title": "Daha Yüksek Hizmet Seviyeleri", "desc": "Deponuzu şişirmeden yüksek bulunabilirliği koruyun." },
-        "2": { "title": "Dinamik Duyarlılık", "desc": "Değişen teslim sürelerine ve talep artışlarına otomatik olarak uyum sağlayın." }
+        "2": { "title": "Dinamik Adaptasyon", "desc": "ERP'nizin aksine, değişen teslim sürelerine ve talep dalgalanmalarına anında uyum sağlayan esnek yapı." }
       }
     },
     "pricing-promotion": {
       "title": "Fiyatlandırma ve Promosyon Tahmini",
       "subtitle": "Akıllı Fiyatlandırma ile Marjları Optimize Edin",
-      "description": "Hangi indirimlerin işe yaradığını tahmin etmeyi bırakın. Fiyat değişikliklerinin ve promosyon senaryolarının hacim, gelir ve brüt kar marjı üzerindeki etkisini uygulamadan önce simüle edin.",
+      "description": "Rakipleri körü körüne takip etmeyin. Kendi maliyet yapınıza, stok durumunuza ve müşteri davranışınıza özel fiyatlandırma senaryoları simüle edin.",
       "features": {
         "0": "Fiyat Elastikiyeti Modellemesi",
         "1": "Promosyon Artış Tahmini",
@@ -197,7 +197,7 @@
       "benefits": {
         "0": { "title": "Daha Yüksek Ciro", "desc": "Sezonluk stoku değer kaybetmeden hızlıca elden çıkarın." },
         "1": { "title": "Optimize Edilmiş Marjlar", "desc": "Marjdan ödün vermeden stoku temizlemek için mükemmel fiyat noktasını bulun." },
-        "2": { "title": "Otomatik Uygulama", "desc": "Yapay zeka destekli fiyat önerileriyle zaman kazanın." }
+        "2": { "title": "Size Özel Kurgu", "desc": "Sezon sonu kurallarınızı sisteme bir kez öğretin, gerisini yapay zeka sizin stratejinize göre yönetsin." }
       },
       "hero": {
         "badge": "Sezonluk planlama çözümü",
@@ -294,9 +294,9 @@
     "metrics": {
       "title": "Satışları, kârı veya hacmi maksimize etmek için fiyatlandırma süreçlerini basitleştirin",
       "cards": {
-        "0": { "title": "Artırın", "desc": "Kâr Marjları" },
-        "1": { "title": "Büyütün", "desc": "Pazar Payı" },
-        "2": { "title": "İyileştirin", "desc": "Fiyat Algısı" }
+        "0": { "title": "Kâr Marjları", "desc": "Artırın" },
+        "1": { "title": "Pazar Payı", "desc": "Büyütün" },
+        "2": { "title": "Fiyat Algısını", "desc": "İyileştirin" }
       }
     },
     "precision": {
@@ -374,5 +374,14 @@
       "talk": "Konuşalım",
       "requestDemo": "Demo İsteyin"
     }
+  },
+  "ChatWidget": {
+    "buttonText": "BeeAI'a sorun",
+    "title": "BeeAI Asistan",
+    "status": "Çevrimiçi",
+    "welcomeMessage": "Merhaba! Ben BeeAI. Size nasıl yardımcı olabilirim?",
+    "inputPlaceholder": "BeeAI'a bir şeyler sorun...",
+    "errorGeneral": "Bir hata oluştu, lütfen tekrar deneyin.",
+    "errorConnection": "Üzgünüm, şu an bağlantıda bir sorun var. Lütfen daha sonra tekrar deneyin."
   }
 }
